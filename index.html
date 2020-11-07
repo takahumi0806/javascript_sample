@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +7,28 @@
 </head>
 <body>
   <script>
-    while (true) {
-      const result = window.prompt("日本の首都は")
-      if (result === "東京"){
-        window.alert(" 正解です. ")
-      }else{
-        window.alert(" 不正解です。")
-      }
-    }
+    const equal = '============================='
+    const items = ['掃除', '買い物', '散歩'];
+    console.log(equal)
+    console.log('現在持っているタスクは')
+    console.log(equal)
+    items.forEach(function(value, i) {
+      console.log(i + ':' + value);
+    });
+
+    const result = window.prompt('タスクを入力してくだい')
+    items.push(result)
+    window.alert('新しいタスクが追加されました。')
+
+    console.log(equal)
+    console.log('現在持っているタスクは')
+    console.log(equal)
+    items.forEach(function(value, i) {
+      console.log(i + ':'+ value);
+    });
+    
+    window.prompt('「確認、追加、削除、終了」を入力して下さい')
+
   </script>
 </body>
 </html>
