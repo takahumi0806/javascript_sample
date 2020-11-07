@@ -7,27 +7,27 @@
 </head>
 <body>
   <script>
-    const equal = "============================="
-    const items = [ '掃除', '買い物', '散歩' ];
+    const equal = '============================='
+    const items = ['掃除', '買い物', '散歩'];
     console.log(equal)
-    console.log("現在持っているタスクは")
+    console.log('現在持っているタスクは')
     console.log(equal)
-    items.forEach(function( value, i ) {
-      console.log( i + ":" + value );
+    items.forEach(function(value, i) {
+      console.log(i + ':' + value);
     });
 
-    result = window.prompt("タスクを入力してくだい")
+    const result = window.prompt('タスクを入力してくだい')
     items.push(result)
     window.alert('新しいタスクが追加されました。')
 
     console.log(equal)
-    console.log("現在持っているタスクは")
+    console.log('現在持っているタスクは')
     console.log(equal)
-    items.forEach(function( value, i ) {
-      console.log( i + ":" + value );
+    items.forEach(function(value, i) {
+      console.log(i + ':'+ value);
     });
     
-    window.prompt("「確認、追加、削除、終了」を入力して下さい")
+    window.prompt('「確認、追加、削除、終了」を入力して下さい')
 
   </script>
 </body>
