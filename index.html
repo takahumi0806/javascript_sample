@@ -7,27 +7,28 @@
 </head>
 <body>
   <script>
-    const equal = '============================='
-    const items　= {掃除: '机を片付ける', 買い物: '牛乳を買う', 運動: '散歩をする'};
-    console.log(equal)
-    console.log('現在持っているタスクは')
-    console.log(equal)
-    Object.keys(items).forEach(function (key,i) {
-      console.log(i + ':' + '[内容]' + items[key] + '[ジャンル]' + key);
-    });
-    const task = window.prompt('タスクを入力して下さい')
-    const genre = window.prompt('ジャンルを入力して下さい')
-    items[genre] = task
-  
-    window.alert('新しいタスクが追加されました。')
-  
-    console.log(equal)
-    console.log('現在持っているタスクは')
-    console.log(equal)
-    Object.keys(items).forEach(function (key,i) {
-      console.log(i + ':' + '[内容]' + items[key] + '[ジャンル]' + key);
-    });
+    function item(items){
+      const equal = '============================='
+      console.log(equal)
+      console.log('現在持っているタスクは')
+      console.log(equal)
     
+      items.forEach(function(item,i){
+      console.log(`${i} : [内容]${item.content},[ジャンル]${item.genre}`)
+      })
+    }
+
+    const items = [
+      {genre : '掃除',content :'机を片付ける'},
+      {genre : '買い物',content :'牛乳を買う'},
+      {genre : '運動',content :'散歩をする'}
+    ];
+    item(items)
+    const content = window.prompt('タスクを入力して下さい')
+    const genre = window.prompt('ジャンルを入力して下さい')
+    items.push({genre: genre, content: content})
+    window.alert('新しいタスクが追加されました。')
+    item(items)
     window.prompt('「確認、追加、削除、終了」を入力して下さい')
   </script>
 </body>
