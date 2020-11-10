@@ -7,28 +7,28 @@
 </head>
 <body>
   <script>
-    function item(items){
+    function inputMemo(memos){
       const equal = '============================='
       console.log(equal)
       console.log('現在持っているタスクは')
       console.log(equal)
     
-      items.forEach(function(item,i){
-        console.log(`${i} : [内容]${item.content},[ジャンル]${item.genre}`)
+      memos.forEach(function(memo,i){
+        console.log(`${i} : [内容]${memo.content},[ジャンル]${memo.genre}`)
       })
     }
 
-    const items = [
+    const memos = [
       {genre : '掃除',content :'机を片付ける'},
       {genre : '買い物',content :'牛乳を買う'},
       {genre : '運動',content :'散歩をする'}
     ];
-    item(items)
+    inputMemo(memos)
     const content = window.prompt('タスクを入力して下さい')
     const genre = window.prompt('ジャンルを入力して下さい')
-    items.push({genre: genre, content: content})
+    memos.push({genre: genre, content: content})
     window.alert('新しいタスクが追加されました。')
-    item(items)
+    inputMemo(memos)
     window.prompt('「確認、追加、削除、終了」を入力して下さい')
   </script>
 </body>
